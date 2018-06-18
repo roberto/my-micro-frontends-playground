@@ -1,0 +1,8 @@
+{
+  "name": "simple-element",
+  "description": "My Simple Element",
+  "main": "simple-element.js",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0"
+  }
+}
