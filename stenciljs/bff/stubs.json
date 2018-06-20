@@ -5,8 +5,9 @@
     },
     "response": {
       "headers": {
-      "content-type": "application/json"
-    },
+        "content-type": "application/json"
+      },
+      "latency": 2000,
       "file": "stubs/widgets.json"
     }
   }
