@@ -1,0 +1,12 @@
+{
+  "name": "bff",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "start": "stubby --watch --data ./stubs.json"
+  },
+  "author": "",
+  "dependencies": {
+    "stubby": "^4.0.0"
+  }
+}

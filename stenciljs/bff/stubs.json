@@ -1,0 +1,13 @@
+[
+  {
+    "request": {
+      "url": "/widgets"
+    },
+    "response": {
+      "headers": {
+      "content-type": "application/json"
+    },
+      "file": "stubs/widgets.json"
+    }
+  }
+]
