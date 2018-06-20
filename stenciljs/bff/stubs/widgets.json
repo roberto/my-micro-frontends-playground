@@ -1,13 +1,13 @@
 {
   "widgets": [
     {
-      "title": "Hotel",
-      "img": "https://placeimg.com/400/200/arch/grayscale",
+      "text": "Hotel",
+      "image": "https://placeimg.com/400/200/arch/grayscale",
       "action": "Get a room!"
     },
     {
-      "title": "Car",
-      "img": "https://placeimg.com/400/200/arch/grayscale",
+      "text": "Car",
+      "image": "https://placeimg.com/400/200/arch/grayscale",
       "action": "Run!"
     }
   ]
