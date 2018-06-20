@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'my-container',
@@ -8,15 +8,36 @@ import { Component, Prop } from '@stencil/core';
 export class MyContainer {
 
   @Prop() language: string;
+  @State() widgets: [
+    {
+      text: string,
+      image: string,
+      action: string
+    }
+  ];
+
+  componentDidLoad() {
+    return fetch('http://localhost:8882/widgets')
+      .then(response => response.json())
+      .then(data => {
+        this.widgets = data.widgets;
+      });
+  }
+
+	buildWidgets() {
+		return this.widgets.map(
+      (widget) => <my-widget {...widget}></my-widget>
+    );
+  }
+
+  showLoading() {
+    return <h2>Loading!</h2>;
+  }
 
   render() {
     return (
       <div>
-        <my-widget
-          text="Mejor viaje ever!"
-          image="https://placeimg.com/400/200/people/grayscale"
-          action="Dale">
-        </my-widget>
+        {this.widgets ? this.buildWidgets() : this.showLoading()}
       </div>
     );
   }
