@@ -3,12 +3,14 @@
     {
       "text": "Hotel",
       "image": "https://placeimg.com/400/200/arch/grayscale",
-      "action": "Get a room!"
+      "action": "Get a room!",
+      "appUrl": "https://chvin.github.io/react-tetris/app-1.0.1.js"
     },
     {
       "text": "Car",
       "image": "https://placeimg.com/400/200/nature/grayscale",
-      "action": "Run!"
+      "action": "Run!",
+      "appUrl": "https://chvin.github.io/react-tetris/app-1.0.1.js"
     }
   ]
 }
