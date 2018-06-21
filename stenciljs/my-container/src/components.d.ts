@@ -88,6 +88,7 @@ declare global {
     export interface MyWidgetAttributes extends HTMLAttributes {
       'action'?: string;
       'image'?: string;
+      'onOpenApp'?: (event: CustomEvent) => void;
       'text'?: string;
     }
   }

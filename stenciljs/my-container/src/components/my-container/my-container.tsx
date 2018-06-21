@@ -1,4 +1,4 @@
-import { Component, Prop, State } from '@stencil/core';
+import { Component, Prop, State, Listen } from '@stencil/core';
 
 @Component({
   tag: 'my-container',
@@ -15,6 +15,11 @@ export class MyContainer {
       action: string
     }
   ];
+
+  @Listen('openApp')
+  openAppHandler(event: CustomEvent) {
+    console.log(event.detail);
+  }
 
   componentDidLoad() {
     return fetch('http://localhost:8882/widgets')
