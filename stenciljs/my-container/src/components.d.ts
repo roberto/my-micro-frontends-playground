@@ -60,8 +60,43 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface MyModal {
+      'appUrl': string;
+    }
+  }
+
+  interface HTMLMyModalElement extends StencilComponents.MyModal, HTMLStencilElement {}
+
+  var HTMLMyModalElement: {
+    prototype: HTMLMyModalElement;
+    new (): HTMLMyModalElement;
+  };
+  interface HTMLElementTagNameMap {
+    'my-modal': HTMLMyModalElement;
+  }
+  interface ElementTagNameMap {
+    'my-modal': HTMLMyModalElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'my-modal': JSXElements.MyModalAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyModalAttributes extends HTMLAttributes {
+      'appUrl'?: string;
+      'onCloseApp'?: (event: CustomEvent) => void;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface MyWidget {
       'action': string;
+      'appUrl': string;
       'image': string;
       'text': string;
     }
@@ -87,6 +122,7 @@ declare global {
   namespace JSXElements {
     export interface MyWidgetAttributes extends HTMLAttributes {
       'action'?: string;
+      'appUrl'?: string;
       'image'?: string;
       'onOpenApp'?: (event: CustomEvent) => void;
       'text'?: string;

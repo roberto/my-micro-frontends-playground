@@ -1,0 +1,21 @@
+.my-modal {
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width: 100%;
+}
+
+.my-modal {
+  z-index:101;
+  background-color: orange;
+  visibility: hidden;
+  opacity: 0;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.my-modal.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
