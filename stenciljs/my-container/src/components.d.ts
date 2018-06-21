@@ -56,6 +56,43 @@ declare global {
   }
 }
 
+
+declare global {
+
+  namespace StencilComponents {
+    interface MyWidget {
+      'action': string;
+      'image': string;
+      'text': string;
+    }
+  }
+
+  interface HTMLMyWidgetElement extends StencilComponents.MyWidget, HTMLStencilElement {}
+
+  var HTMLMyWidgetElement: {
+    prototype: HTMLMyWidgetElement;
+    new (): HTMLMyWidgetElement;
+  };
+  interface HTMLElementTagNameMap {
+    'my-widget': HTMLMyWidgetElement;
+  }
+  interface ElementTagNameMap {
+    'my-widget': HTMLMyWidgetElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'my-widget': JSXElements.MyWidgetAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyWidgetAttributes extends HTMLAttributes {
+      'action'?: string;
+      'image'?: string;
+      'text'?: string;
+    }
+  }
+}
+
 declare global { namespace JSX { interface StencilJSX {} } }
 
 export declare function defineCustomElements(window: any): void;
