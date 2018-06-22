@@ -3,7 +3,7 @@ import { Component, Prop, Event, EventEmitter } from '@stencil/core';
 @Component({
   tag: 'my-modal',
   styleUrl: 'my-modal.css',
-  shadow: true
+  shadow: false
 })
 export class MyModal {
 
@@ -14,11 +14,15 @@ export class MyModal {
     return `my-modal ${this.appUrl ? 'active' : ''}`;
   }
 
+  renderApp() {
+    if (this.appUrl) return <my-app appUrl={this.appUrl}></my-app>
+  }
+
   render() {
     return (
       <div class={this.classes()}>
-        Dale! {this.appUrl}
         <button onClick={() => this.closeApp.emit()}>[Close X]</button>
+        {this.renderApp()}
       </div>
     );
   }

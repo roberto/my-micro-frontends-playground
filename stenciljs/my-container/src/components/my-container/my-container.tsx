@@ -3,7 +3,7 @@ import { Component, Prop, State, Listen } from '@stencil/core';
 @Component({
   tag: 'my-container',
   styleUrl: 'my-container.css',
-  shadow: true
+  shadow: false
 })
 export class MyContainer {
 

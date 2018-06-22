@@ -27,6 +27,39 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface MyApp {
+      'appUrl': string;
+    }
+  }
+
+  interface HTMLMyAppElement extends StencilComponents.MyApp, HTMLStencilElement {}
+
+  var HTMLMyAppElement: {
+    prototype: HTMLMyAppElement;
+    new (): HTMLMyAppElement;
+  };
+  interface HTMLElementTagNameMap {
+    'my-app': HTMLMyAppElement;
+  }
+  interface ElementTagNameMap {
+    'my-app': HTMLMyAppElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'my-app': JSXElements.MyAppAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MyAppAttributes extends HTMLAttributes {
+      'appUrl'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface MyContainer {
       'language': string;
     }
