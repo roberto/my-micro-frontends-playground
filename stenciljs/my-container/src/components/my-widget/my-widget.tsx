@@ -15,7 +15,7 @@ export class MyWidget {
 
   render() {
     return (
-      <div>
+      <div class="my-widget">
         <h2>{this.text}</h2>
         <img src={this.image} />
         <button onClick={() => this.openApp.emit(this.appUrl)}>

@@ -1,9 +1,9 @@
 .my-modal {
   position: absolute;
-  top:0;
-  left:0;
-  height:100%;
-  width: 100%;
+  top:10%;
+  left:25%;
+  height:50%;
+  width: 50%;
 }
 
 .my-modal {
