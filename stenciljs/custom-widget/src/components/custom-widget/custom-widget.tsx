@@ -1,11 +1,11 @@
 import { Component, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'my-widget',
-  styleUrl: 'my-widget.css',
+  tag: 'custom-widget',
+  styleUrl: 'custom-widget.css',
   shadow: true
 })
-export class MyWidget {
+export class CustomWidget {
 
   @Prop() text: string;
   @Prop() image: string;

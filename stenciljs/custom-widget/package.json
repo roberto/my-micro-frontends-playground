@@ -1,5 +1,5 @@
 {
-  "name": "my-widget",
+  "name": "custom-widget",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "module": "dist/esm/index.js",
