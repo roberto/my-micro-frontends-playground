@@ -28,7 +28,10 @@ declare global {
 
   namespace StencilComponents {
     interface MyApp {
-      'appUrl': string;
+      'app': {
+    url: string,
+    component: string
+  };
     }
   }
 
@@ -51,7 +54,10 @@ declare global {
   }
   namespace JSXElements {
     export interface MyAppAttributes extends HTMLAttributes {
-      'appUrl'?: string;
+      'app'?: {
+    url: string,
+    component: string
+  };
     }
   }
 }
@@ -94,7 +100,10 @@ declare global {
 
   namespace StencilComponents {
     interface MyModal {
-      'appUrl': string;
+      'app': {
+    url: string,
+    component: string
+  };
     }
   }
 
@@ -117,7 +126,10 @@ declare global {
   }
   namespace JSXElements {
     export interface MyModalAttributes extends HTMLAttributes {
-      'appUrl'?: string;
+      'app'?: {
+    url: string,
+    component: string
+  };
       'onCloseApp'?: (event: CustomEvent) => void;
     }
   }
@@ -129,7 +141,7 @@ declare global {
   namespace StencilComponents {
     interface MyWidget {
       'action': string;
-      'appUrl': string;
+      'app': object;
       'image': string;
       'text': string;
     }
@@ -155,7 +167,7 @@ declare global {
   namespace JSXElements {
     export interface MyWidgetAttributes extends HTMLAttributes {
       'action'?: string;
-      'appUrl'?: string;
+      'app'?: object;
       'image'?: string;
       'onOpenApp'?: (event: CustomEvent) => void;
       'text'?: string;

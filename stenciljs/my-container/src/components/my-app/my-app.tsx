@@ -7,16 +7,16 @@ import { Component, Prop } from '@stencil/core';
 })
 export class MyApp {
 
-  @Prop() appUrl: string;
+  @Prop() app: {
+    url: string,
+    component: string
+  };
 
-  componentDidLoad() {
-    import(`${this.appUrl}?${Math.random()}`);
+  componentWillLoad() {
+    import(this.app.url);
   }
 
   render() {
-    return (
-      <div id="root">
-      </div>
-    );
+    return h(this.app.component);
   }
 }

@@ -13,21 +13,22 @@ export class MyContainer {
       text: string,
       image: string,
       action: string,
-      appUrl: string
+      app: object
     }
   ];
-  @State() activeAppUrl: string;
+  @State() activeApp: {
+    url: string,
+    component: string
+  };
 
   @Listen('openApp')
   openAppHandler(event: CustomEvent) {
-    console.log('open ' + event.detail);
-    this.activeAppUrl = event.detail;
+    this.activeApp = event.detail;
   }
 
   @Listen('closeApp')
   closeAppHandler() {
-    console.log('close ');
-    this.activeAppUrl = null;
+    this.activeApp = null;
   }
 
   componentDidLoad() {
@@ -52,7 +53,7 @@ export class MyContainer {
     return (
       <div>
         {this.widgets ? this.buildWidgets() : this.showLoading()}
-        <my-modal appUrl={this.activeAppUrl}></my-modal>
+        <my-modal app={this.activeApp}></my-modal>
       </div>
     );
   }

@@ -10,7 +10,7 @@ export class MyWidget {
   @Prop() text: string;
   @Prop() image: string;
   @Prop() action: string;
-  @Prop() appUrl: string;
+  @Prop() app: object;
   @Event() openApp: EventEmitter;
 
   render() {
@@ -18,7 +18,7 @@ export class MyWidget {
       <div class="my-widget">
         <h2>{this.text}</h2>
         <img src={this.image} />
-        <button onClick={() => this.openApp.emit(this.appUrl)}>
+        <button onClick={() => this.openApp.emit(this.app)}>
           {this.action}
         </button>
       </div>

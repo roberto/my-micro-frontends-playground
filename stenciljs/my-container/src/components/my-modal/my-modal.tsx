@@ -7,15 +7,18 @@ import { Component, Prop, Event, EventEmitter } from '@stencil/core';
 })
 export class MyModal {
 
-  @Prop() appUrl: string;
+  @Prop() app: {
+    url: string,
+    component: string
+  };
   @Event() closeApp: EventEmitter;
 
   classes() {
-    return `my-modal ${this.appUrl ? 'active' : ''}`;
+    return `my-modal ${this.app ? 'active' : ''}`;
   }
 
   renderApp() {
-    if (this.appUrl) return <my-app appUrl={this.appUrl}></my-app>
+    if (this.app) return <my-app app={this.app}></my-app>
   }
 
   render() {

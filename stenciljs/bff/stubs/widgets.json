@@ -4,13 +4,19 @@
       "text": "Hotel",
       "image": "https://placeimg.com/400/200/arch/grayscale",
       "action": "Get a room!",
-      "appUrl": "https://chvin.github.io/react-tetris/app-1.0.1.js"
+      "app": {
+      	"url": "https://react-hn.appspot.com/core.js",
+	"component": "my-hotel"
+      }
     },
     {
       "text": "Car",
       "image": "https://placeimg.com/400/200/nature/grayscale",
       "action": "Run!",
-      "appUrl": "https://chvin.github.io/react-tetris/app-1.0.1.js"
+      "app": {
+      	"url": "http://localhost:8080/main.js",
+      	"component": "my-car"
+      }
     }
   ]
 }
