@@ -9,10 +9,12 @@
     "start:bff": "cd bff && npm start",
     "start:stenciljs": "cd stenciljs/my-container && npm start",
     "start:cinema-app": "cd cinema-app && npm start",
+    "start:candy-app": "http-server --cors -p 7003 micro-candy-app/build",
     "postinstall": "concurrently \"npm:install:*\"",
     "install:bff": "cd bff && npm install",
     "install:stenciljs": "cd stenciljs/my-container && npm install",
-    "install:cinema-app": "cd cinema-app && npm install"
+    "install:cinema-app": "cd cinema-app && npm install",
+    "install:micro-candy-app": "cd micro-candy-app && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
   },
   "homepage": "https://github.com/roberto/my-micro-frontends-playground#readme",
   "dependencies": {
-    "concurrently": "^3.6.0"
+    "concurrently": "^3.6.0",
+    "http-server": "^0.11.1"
   }
 }
