@@ -225,7 +225,7 @@ module.exports = {
       inject: true,
       template: 'public/including-component.html',
       templateParameters: {
-        componentUrl: 'http://localhost:7001/build/mycomponents.js'
+        containerjs: 'http://localhost:7001/build/mycomponents.js'
       },
       filename: 'stenciljs.html'
     }),
