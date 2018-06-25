@@ -1,21 +1,21 @@
 {
   "widgets": [
     {
-      "text": "Hotel",
-      "image": "https://placeimg.com/400/200/arch/grayscale",
-      "action": "Get a room!",
+      "text": "Seat",
+      "image": "https://loremflickr.com/240/160/cinema,seat?lock=10",
+      "action": "Pick a seat!",
       "app": {
       	"url": "https://react-hn.appspot.com/core.js",
-	"component": "my-hotel"
+	"component": "my-seat"
       }
     },
     {
-      "text": "Car",
-      "image": "https://placeimg.com/400/200/nature/grayscale",
-      "action": "Run!",
+      "text": "Candy",
+      "image": "https://loremflickr.com/240/160/candy,sweet?lock=10",
+      "action": "Choose yours!",
       "app": {
       	"url": "http://localhost:8080/main.js",
-      	"component": "my-car"
+      	"component": "my-candies"
       }
     }
   ]

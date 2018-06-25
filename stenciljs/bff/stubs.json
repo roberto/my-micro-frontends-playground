@@ -7,7 +7,7 @@
       "headers": {
         "content-type": "application/json"
       },
-      "latency": 2000,
+      "latency": 500,
       "file": "stubs/widgets.json"
     }
   }

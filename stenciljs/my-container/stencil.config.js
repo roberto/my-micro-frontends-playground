@@ -13,5 +13,6 @@ exports.config = {
 
 exports.devServer = {
   root: 'www',
-  watchGlob: '**/**'
+  watchGlob: '**/**',
+  httpPort: "7001"
 }

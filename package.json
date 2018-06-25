@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently --names cinema \"cd cinema-app && npm start\""
+    "start": "concurrently --names \"cinema,stenciljs\" \"cd cinema-app && npm start\" \"cd stenciljs/my-container && npm start\""
   },
   "repository": {
     "type": "git",
