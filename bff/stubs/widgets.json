@@ -14,8 +14,8 @@
       "image": "https://loremflickr.com/240/160/candy,sweet?lock=10",
       "action": "Choose yours!",
       "app": {
-      	"url": "http://localhost:8080/main.js",
-      	"component": "my-candies"
+      	"url": "http://localhost:7003/static/js/candy-store.js",
+      	"component": "candy-store"
       }
     }
   ]
