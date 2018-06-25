@@ -223,7 +223,10 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: true,
-      template: 'public/stenciljs.html',
+      template: 'public/including-component.html',
+      templateParameters: {
+        componentUrl: 'http://localhost:7001/build/mycomponents.js'
+      },
       filename: 'stenciljs.html'
     }),
     // Add module names to factory functions so they appear in browser profiler.
