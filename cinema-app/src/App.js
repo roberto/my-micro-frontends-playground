@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import './App.css';
 
 const Header = () =>
-  <section className="hero is-info">
+  <section className="hero is-primary">
     <div className="hero-body">
       <div className="container">
         <h1 className="title">
