@@ -1,0 +1,23 @@
+{
+  "name": "my-micro-frontends-playground",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --names cinema \"cd cinema-app && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roberto/my-micro-frontends-playground.git"
+  },
+  "author": "Roberto Soares",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roberto/my-micro-frontends-playground/issues"
+  },
+  "homepage": "https://github.com/roberto/my-micro-frontends-playground#readme",
+  "dependencies": {
+    "concurrently": "^3.6.0"
+  }
+}
