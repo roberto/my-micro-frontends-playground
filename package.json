@@ -9,7 +9,7 @@
     "start:bff": "cd bff && npm start",
     "start:stenciljs": "cd stenciljs/my-container && npm start",
     "start:cinema-app": "cd cinema-app && npm start",
-    "setup": "concurrently \"npm:install:*\"",
+    "postinstall": "concurrently \"npm:install:*\"",
     "install:bff": "cd bff && npm install",
     "install:stenciljs": "cd stenciljs/my-container && npm install",
     "install:cinema-app": "cd cinema-app && npm install"
