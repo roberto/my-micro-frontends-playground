@@ -41,7 +41,10 @@ export class MyContainer {
 
 	buildWidgets() {
 		return this.widgets.map(
-      (widget) => <my-widget {...widget}></my-widget>
+      (widget) =>
+        <div class="column">
+          <my-widget {...widget}></my-widget>
+        </div>
     );
   }
 
@@ -51,7 +54,7 @@ export class MyContainer {
 
   render() {
     return (
-      <div>
+      <div class="columns">
         {this.widgets ? this.buildWidgets() : this.showLoading()}
         <my-modal app={this.activeApp}></my-modal>
       </div>

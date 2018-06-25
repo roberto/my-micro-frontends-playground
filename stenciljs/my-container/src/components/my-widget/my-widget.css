@@ -1,4 +1,32 @@
-.my-widget {
-  border: 1px solid black;
-  width: 500px;
+.card.is-horizontal {
+  flex-direction: row;
+  display: flex;
+  flex-basis: 50ex;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+.card.is-horizontal .card-image {
+  flex: 2;
+  flex-shrink: 2;
+}
+
+.card.is-horizontal .image {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 160px;
+  width: 240px;
+  margin-left: 0;
+}
+
+.card.is-horizontal img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card.is-horizontal .card-content {
+  flex: 3;
+  flex-shrink: 3;
 }
