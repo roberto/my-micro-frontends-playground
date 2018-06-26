@@ -14,7 +14,7 @@ export class MyModal {
   @Event() closeApp: EventEmitter;
 
   classes() {
-    return `my-modal ${this.app ? 'active' : ''}`;
+    return `modal ${this.app ? 'is-active' : ''}`;
   }
 
   renderApp() {
@@ -24,8 +24,16 @@ export class MyModal {
   render() {
     return (
       <div class={this.classes()}>
-        <button onClick={() => this.closeApp.emit()}>[Close X]</button>
-        {this.renderApp()}
+        <div class="modal-background" onClick={() => this.closeApp.emit()}></div>
+        <div class="modal-content">
+          {this.renderApp()}
+        </div>
+        <button
+          class="modal-close is-large"
+          aria-label="close"
+          onClick={() => this.closeApp.emit()}
+        >
+        </button>
       </div>
     );
   }
