@@ -1,7 +1,7 @@
 // reference:
 // https://medium.com/dev-channel/the-case-for-custom-elements-part-1-65d807b4b439
 
-class Example extends HTMLElement {
+class MyContainer extends HTMLElement {
   // This gets called when the HTML parser sees your tag
   constructor() {
     super(); // always call super() first in the constructor.
@@ -14,4 +14,4 @@ class Example extends HTMLElement {
   }
 }
 // This registers your new tag and associates it with your class
-window.customElements.define('my-example', Example);
+window.customElements.define('my-container', MyContainer);

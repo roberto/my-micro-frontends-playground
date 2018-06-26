@@ -11,8 +11,9 @@ Demo using WebComponents to compose apps.
 
 * 7000 - cinema app
 * 7002 - bff (stubby)
-* 7001 - stenciljs demo
-* 7003 - candy store app
+* 7001 - Stenciljs demo
+* 7003 - Candy Store app - React wrapped as WebComponent
+* 7004 - WebComponent demo
 
 ## Troubleshooting
 

@@ -256,7 +256,8 @@ module.exports = {
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   ].concat(
-    addComponentDemo('stenciljs', 'http://localhost:7001/build/mycomponents.js')
+    addComponentDemo('stenciljs', 'http://localhost:7001/build/mycomponents.js'),
+    addComponentDemo('web-component', 'http://localhost:7004/my-container.js')
   ),
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.

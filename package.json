@@ -10,6 +10,7 @@
     "start:stenciljs": "cd stenciljs/my-container && npm start",
     "start:cinema-app": "cd cinema-app && npm start",
     "start:candy-app": "http-server --cors -p 7003 micro-candy-app/build",
+    "start:web-component": "http-server --cors -p 7004 web-components",
     "postinstall": "concurrently \"npm:install:*\"",
     "install:bff": "cd bff && npm install",
     "install:stenciljs": "cd stenciljs/my-container && npm install",
