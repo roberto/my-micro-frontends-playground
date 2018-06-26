@@ -32,7 +32,7 @@ export class MyContainer {
   }
 
   componentDidLoad() {
-    return fetch('http://localhost:8882/widgets')
+    return fetch('http://localhost:7002/widgets')
       .then(response => response.json())
       .then(data => {
         this.widgets = data.widgets;

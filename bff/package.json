@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
-    "start": "stubby --watch --data ./stubs.json"
+    "start": "stubby --stubs 7002 --watch --data ./stubs.json"
   },
   "author": "",
   "dependencies": {
