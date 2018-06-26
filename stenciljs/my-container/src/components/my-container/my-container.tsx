@@ -7,13 +7,16 @@ import { Component, Prop, State, Listen } from '@stencil/core';
 })
 export class MyContainer {
 
-  @Prop() language: string;
+  @Prop() initialapp: string;
   @State() widgets: [
     {
       text: string,
       image: string,
       action: string,
-      app: object
+      app: {
+        url: string,
+        component: string
+      }
     }
   ];
   @State() activeApp: {
@@ -39,25 +42,46 @@ export class MyContainer {
       });
   }
 
-	buildWidgets() {
-		return this.widgets.map(
-      (widget) =>
-        <div class="column">
-          <my-widget {...widget}></my-widget>
-        </div>
-    );
-  }
-
-  showLoading() {
-    return <h2>Loading!</h2>;
-  }
-
   render() {
-    return (
-      <div class="columns">
-        {this.widgets ? this.buildWidgets() : this.showLoading()}
-        <my-modal app={this.activeApp}></my-modal>
-      </div>
+    if (this.widgets) {
+      const initialWidget = this.findInitialWidget();
+      console.log(initialWidget);
+
+      if (initialWidget) {
+        return this.renderApp(initialWidget.app);
+      }
+
+      return this.renderWidgets();
+    }
+
+    return this.renderLoading();
+  }
+
+  findInitialWidget() {
+    return this.widgets.find(
+      (widget) => widget.app.component === this.initialapp
     );
+  }
+
+	renderWidgets() {
+    return ([
+      <div class="columns">
+        {this.widgets.map(
+          (widget) =>
+            <div class="column">
+              <my-widget {...widget}></my-widget>
+            </div>
+        )}
+      </div>,
+      <my-modal app={this.activeApp}></my-modal>
+    ])
+  }
+
+  renderApp(app) {
+    return <my-app app={app}></my-app>;
+  }
+
+  renderLoading() {
+    return <h2>Loading!</h2>;
   }
 }

@@ -67,7 +67,7 @@ declare global {
 
   namespace StencilComponents {
     interface MyContainer {
-      'language': string;
+      'initialapp': string;
     }
   }
 
@@ -90,7 +90,7 @@ declare global {
   }
   namespace JSXElements {
     export interface MyContainerAttributes extends HTMLAttributes {
-      'language'?: string;
+      'initialapp'?: string;
     }
   }
 }

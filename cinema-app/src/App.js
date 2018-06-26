@@ -78,6 +78,8 @@ const PageActions = () =>
     </div>
   </nav>
 
+const parseInitialApp = () =>
+  new URLSearchParams(window.location.search).get("initial-app");
 
 class App extends Component {
   render() {
@@ -93,7 +95,7 @@ class App extends Component {
               </p>
               <ContactForm />
               <div className="box">
-                <my-container></my-container>
+                <my-container initialApp={parseInitialApp()}></my-container>
               </div>
               <PageActions />
             </div>
