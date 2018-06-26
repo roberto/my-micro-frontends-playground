@@ -45,7 +45,6 @@ export class MyContainer {
   render() {
     if (this.widgets) {
       const initialWidget = this.findInitialWidget();
-      console.log(initialWidget);
 
       if (initialWidget) {
         return this.renderApp(initialWidget.app);
