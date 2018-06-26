@@ -22,6 +22,18 @@ const publicUrl = '';
 // Get environment variables to inject into our app.
 const env = getClientEnvironment(publicUrl);
 
+const addComponentDemo = (demo, url) =>
+  [
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: 'public/including-component.html',
+      templateParameters: {
+        containerjs: url
+      },
+      filename: `${demo}.html`
+    })
+  ]
+
 // This is the development configuration.
 // It is focused on developer experience and fast rebuilds.
 // The production configuration is different and lives in a separate file.
@@ -221,14 +233,6 @@ module.exports = {
       inject: true,
       template: paths.appHtml,
     }),
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: 'public/including-component.html',
-      templateParameters: {
-        containerjs: 'http://localhost:7001/build/mycomponents.js'
-      },
-      filename: 'stenciljs.html'
-    }),
     // Add module names to factory functions so they appear in browser profiler.
     new webpack.NamedModulesPlugin(),
     // Makes some environment variables available to the JS code, for example:
@@ -251,7 +255,9 @@ module.exports = {
     // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-  ],
+  ].concat(
+    addComponentDemo('stenciljs', 'http://localhost:7001/build/mycomponents.js')
+  ),
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
   node: {
