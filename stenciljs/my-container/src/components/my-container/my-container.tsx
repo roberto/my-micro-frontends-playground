@@ -29,7 +29,7 @@ export class MyContainer {
     this.activeApp = event.detail;
   }
 
-  @Listen('closeApp')
+  @Listen('window:closeApp')
   closeAppHandler() {
     this.activeApp = null;
   }
