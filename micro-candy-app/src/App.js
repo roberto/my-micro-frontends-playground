@@ -36,6 +36,12 @@ class App extends Component {
     window.dispatchEvent(new CustomEvent('closeApp'));
   }
 
+  cancel(e) {
+    e.preventDefault();
+    window.dispatchEvent(new CustomEvent('closeApp'));
+
+  }
+
   render() {
     return (
       <section className="section">
@@ -56,7 +62,7 @@ class App extends Component {
               <p className="level-item">
                 <div className="field is-grouped">
                   <p className="control">
-                    <button className="button">Cancel</button>
+                    <button onClick={this.cancel} className="button">Cancel</button>
                   </p>
                   <p className="control">
                     <button type="submit" className="button is-primary">Add to cart</button>
