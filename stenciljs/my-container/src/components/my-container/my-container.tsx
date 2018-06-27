@@ -34,6 +34,11 @@ export class MyContainer {
     this.activeApp = null;
   }
 
+  @Listen('window:addToCart')
+  addToCartHandler(event: CustomEvent) {
+    console.log(event.detail);
+  }
+
   componentDidLoad() {
     return fetch('http://localhost:7002/widgets')
       .then(response => response.json())
