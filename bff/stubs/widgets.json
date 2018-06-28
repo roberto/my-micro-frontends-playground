@@ -2,7 +2,7 @@
   "widgets": [
     {
       "text": "Seat",
-      "image": "https://loremflickr.com/240/160/cinema,seat?lock=10",
+      "image": "http://placekitten.com/g/240/160",
       "action": "Pick a seat!",
       "app": {
       	"url": "https://react-hn.appspot.com/core.js",
@@ -11,7 +11,7 @@
     },
     {
       "text": "Candy",
-      "image": "https://loremflickr.com/240/160/candy,sweet?lock=10",
+      "image": "http://placekitten.com/240/160?2",
       "action": "Choose yours!",
       "app": {
       	"url": "http://localhost:7003/static/js/candy-store.js",
