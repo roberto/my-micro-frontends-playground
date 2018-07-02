@@ -1,0 +1,6 @@
+{
+  "name": "my-container",
+  "short_name": "my-container",
+  "start_url": "/",
+  "display": "standalone"
+}
