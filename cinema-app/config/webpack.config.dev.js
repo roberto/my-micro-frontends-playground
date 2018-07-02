@@ -22,13 +22,14 @@ const publicUrl = '';
 // Get environment variables to inject into our app.
 const env = getClientEnvironment(publicUrl);
 
-const addComponentDemo = (demo, url) =>
+const addComponentDemo = ({demo, url, polyfill}) =>
   [
     new HtmlWebpackPlugin({
       inject: true,
       template: 'public/including-component.html',
       templateParameters: {
-        containerjs: url
+        demoUrl: url,
+        polyfill
       },
       filename: `${demo}.html`
     })
@@ -256,8 +257,8 @@ module.exports = {
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   ].concat(
-    addComponentDemo('stenciljs', 'http://localhost:7001/build/mycomponents.js'),
-    addComponentDemo('web-component', 'http://localhost:7004/my-container.js')
+    addComponentDemo({demo: 'stenciljs', url: 'http://localhost:7001/build/mycomponents.js', polyfill: false}),
+    addComponentDemo({demo: 'web-component', url: 'http://localhost:7004/my-container.js', polyfill: true})
   ),
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
