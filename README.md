@@ -14,6 +14,7 @@ Demo using WebComponents to compose apps.
 * 7001 - Stenciljs demo
 * 7003 - Candy Store app - React wrapped as WebComponent
 * 7004 - WebComponent demo
+* 7005 - Book seat app - Backbone.Marionette wrapped as webComponent
 
 ## Troubleshooting
 
