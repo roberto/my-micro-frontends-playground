@@ -1,21 +1,21 @@
 {
   "widgets": [
     {
-      "text": "Seat",
-      "image": "http://placekitten.com/g/240/160",
-      "action": "Pick a seat!",
-      "app": {
-      	"url": "https://react-hn.appspot.com/core.js",
-	"component": "my-seat"
-      }
-    },
-    {
       "text": "Candy",
       "image": "http://placekitten.com/240/160?2",
       "action": "Choose yours!",
       "app": {
       	"url": "http://localhost:7003/static/js/candy-store.js",
       	"component": "candy-store"
+      }
+    },
+    {
+      "text": "Book Seats",
+      "image": "http://placekitten.com/240/160?2",
+      "action": "Choose your seat!",
+      "app": {
+      	"url": "http://localhost:7005/book-seats.js",
+      	"component": "book-seats"
       }
     }
   ]
